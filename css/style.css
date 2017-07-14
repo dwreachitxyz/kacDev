@@ -1,0 +1,1620 @@
+/*------------------------------------------------------------------
+Main Color: #a0d149
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+[TABLE OF CONTENTS]
+
+	1. CSS Reset    2. Bootstrap fix for WinPhone 8 and IE10    3. Main Elements    4. Typography	5. Basic Styles		5.1. Hover Overlay
+		5.2. Seperator		5.3. Buttons
+        5.4. Forms	6. Isotope Transitions
+	7. Header
+        7.1. Mobile Navigation
+	8. Hero Section
+	9. Basic Section Styles
+	10. About Section	11. Call to Action
+	12. Services Section
+	13. Counters	14. Portfolio Section        14.1. Filter         14.2. Portfolio Item	15. Clients	16. New Feature Section	17. Testimonials		17.1. Flexslider
+	18 Team Section		18.1. Team Member
+		18.2. Social Icons Hover
+	19. Join Section	20. Contact Section		20.1. Content Box        20.2. Contact Form    21. Blog		20.1. Pagination        20.2. Comments    22. Sidebar	23. Footer		23.1. Newsletter Form
+		23.2. Footer Social Icons
+        23.3. Copyright 
+        23.4. Scroll Up
+    24. Responsive CSS
+		
+
+-------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+1. CSS Reset
+-------------------------------------------------------------------*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*------------------------------------------------------------------
+2. Bootstrap fix for WinPhone 8 and IE10
+-------------------------------------------------------------------*/
+
+@-webkit-viewport   { width: device-width; }
+@-moz-viewport      { width: device-width; }
+@-ms-viewport       { width: device-width; }
+@-o-viewport        { width: device-width; }
+@viewport           { width: device-width; }
+
+/*------------------------------------------------------------------
+3. Main Elements
+-------------------------------------------------------------------*/
+body {
+    font: 16px/32px "PT Sans", Helvetica, Arial, sans-serif;
+    line-height: 1; 
+    -webkit-font-smoothing: antialiased;
+	-webkit-text-size-adjust: 100%;
+    background: #ffffff;
+    overflow-x: hidden; 
+    color: #808080;  
+}
+/*------------------------------------------------------------------
+4. Typography
+-------------------------------------------------------------------*/
+h1, h2, h3, h4, h5, h6 { 
+    font-family: "Oswald", Helvetica, Arial, sans-serif;
+}h1 {
+	font-size: 50px;
+	line-height: 62px;
+    font-weight: 400;
+    color: #515151;
+	letter-spacing: 0.10em;
+    margin-bottom: 20px;
+}
+h2 {
+	font-size: 34px;
+	line-height: 40px;
+	font-weight: 300;
+    color: #7e7e7e;
+    letter-spacing: 0.10em;
+	margin-bottom: 20px;
+}
+h3 {
+	font-size: 26px;
+	line-height: 40px;
+	font-weight: 300;
+    color: #292929;
+    margin-bottom: 20px;
+}
+h4 {
+	font-size: 16px;
+	line-height: 26px;
+	font-weight: 400;
+    margin-bottom: 20px;
+}
+p {
+    font-size: 16px;
+	line-height: 24px;
+}
+a { 
+    color: #a0d149;
+    text-decoration: none; 
+    -webkit-transition: background-color .3s ease, border .3s ease, color .3s ease, opacity .3s ease-in-out, padding .3s ease;
+	   -moz-transition: background-color .3s ease, border .3s ease, color .3s ease, opacity .3s ease-in-out, padding .3s ease;
+	    -ms-transition: background-color .3s ease, border .3s ease, color .3s ease, opacity .3s ease-in-out, padding .3s ease;
+	     -o-transition: background-color .3s ease, border .3s ease, color .3s ease, opacity .3s ease-in-out, padding .3s ease;
+	        transition: background-color .3s ease, border .3s ease, color .3s ease, opacity .3s ease-in-out, padding .3s ease; 
+}
+a:hover {  
+    text-decoration: none; 
+    outline: none;     
+}
+em {
+	font-style: italic;
+}
+strong { 
+    font-weight: 600;
+    color: #a0d149;
+}
+/*------------------------------------------------------------------
+5. Basic Styles
+-------------------------------------------------------------------*/
+.text-left {
+	text-align: left !important;
+}
+.text-right { 
+	text-align: right !important;
+}
+.text-center {
+	text-align: center;
+}
+.float-left {
+	float: left;
+}
+.float-right {
+	float: right;
+}
+.left-margin {
+	margin-left: 80px;
+}
+.right-margin {
+	margin-right: 80px;
+}
+.top-margin {
+	margin-top: 80px;
+}
+.bottom-margin {
+	margin-bottom: 80px;
+}
+.animated {
+	visibility: hidden;
+}
+.visible {
+	visibility: visible;
+}
+/*------------------------------------------------------------------
+5.1. Hover Overlay
+-------------------------------------------------------------------*/
+.overlay {
+    position: relative;
+    overflow: hidden;
+}
+.overlay img {
+    -webkit-transition: all 900ms;
+	-moz-transition: all 900ms;
+	-o-transition: all 900ms;
+    -ms-transition: all 900ms;
+	transition: all 900ms;
+}
+.overlay:hover img {
+    -webkit-transform: scale(1.3);
+    -moz-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+	-o-transform: scale(1.3);
+    transform: scale(1.3);
+}
+.overlay .overlaycolor {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 0;
+	opacity: 0;
+    filter: alpha(opacity=0);
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+}	
+.overlay:hover .overlaycolor {
+	opacity: 1;
+    filter: alpha(opacity=100);
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}	
+.overlay span {
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.50);
+	position: absolute;
+}
+/*------------------------------------------------------------------
+5.2. Seperator
+-------------------------------------------------------------------*/
+.seperator {
+	line-height: 0px;
+	padding: 8px 0;
+}
+.seperator span {
+    width: 100px;
+	height: 2px;
+	background: #000000;
+	display: inline-block;
+	opacity: 0.3; 
+}
+.color-light .seperator span { 
+    background: #ffffff; 
+    opacity: 0.7;
+}
+.seperator.full span { width: 100%; }
+.seperator.medium span { width: 220px; }
+.seperator.small span { width: 100px; }
+.seperator.mini span { width: 40px; }
+
+.seperator.height-1px span { height: 1px; }
+.seperator.height-2px span { height: 2px; }
+.seperator.height-3px span { height: 3px; }
+/*------------------------------------------------------------------
+5.3. Buttons
+-------------------------------------------------------------------*/
+.btn {
+    padding: 15px 50px;
+    line-height: 16px;
+    white-space: normal;
+    text-align: center;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    -webkit-font-smoothing: antialiased;
+    -webkit-appearance: none;
+    -webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-o-border-radius: 3px;
+    border-radius: 3px;
+    color: #fff;
+    -webkit-transition: All 200ms linear;
+	-moz-transition: All 200ms linear;
+	-ms-transition: All 200ms linear;
+	-o-transition: All 200ms linear; 
+    transition: All 200ms linear;
+}
+.btn:hover {
+    color: #fff;
+}
+.btn-small {
+    padding: 8px 16px;
+}
+.btn-medium {
+    padding: 10px 20px;
+}
+.btn-large {
+    padding: 15px 40px;
+    font-size: 16px;
+}
+.btn-big {
+    padding: 18px 45px;
+    font-size: 18px;
+}
+.btn-outline-light {
+    background: transparent;
+    color: rgba(255,255,255,0.8);
+    border: 2px solid rgba(255,255,255,0.3);
+}
+.btn-outline-light:hover {
+    border: 2px solid rgba(255, 255, 255, 0.90); 
+    color: #fff;
+}
+.btn-outline {
+    background: transparent;
+    color: rgba(0, 0, 0, 0.8);
+    border: 2px solid rgba(102, 102, 102, 0.5);
+}
+.btn-outline:hover {
+    border: 2px solid rgba(102, 102, 102, 0.90); 
+    color: #000000;
+}
+.btn-contour {
+    background-color: #a0d149;
+}
+.btn-contour:hover {
+    opacity: 0.8;
+}
+/*------------------------------------------------------------------
+5.4. Forms
+-------------------------------------------------------------------*/
+input, textarea, select {
+    height: auto;
+    max-width: 100%;
+    -webkit-appearance: none;
+    -webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+    color: #475996;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+	-webkit-transition: background-color .3s ease, border .3s ease, color .3s ease;
+	-moz-transition: background-color .3s ease, border .3s ease, color .3s ease;
+	-ms-transition: background-color .3s ease, border .3s ease, color .3s ease;
+	-o-transition: background-color .3s ease, border .3s ease, color .3s ease;
+	transition: background-color .3s ease, border .3s ease, color .3s ease;
+    margin-bottom: 25px;
+}
+#contact-form input::-webkit-input-placeholder, #contact-form textarea::-webkit-input-placeholder, input::-webkit-input-placeholder { color: #666; }
+#contact-form input::-moz-placeholder, #contact-form textarea::-moz-placeholder, input::-moz-placeholder { color: #666; }
+#contact-form input:-ms-input-placeholder, #contact-form textarea:-ms-input-placeholder, input:-ms-input-placeholder { color: #666; }
+#contact-form input.placeholder, #contact-form textarea.placeholder, input.placeholder { color: #666; }
+/*------------------------------------------------------------------
+6. Isotope Transitions
+-------------------------------------------------------------------*/
+/**** Isotope Filtering ****/
+.isotope-item {
+  z-index: 2;
+}
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1;
+}
+/**** Isotope CSS3 transitions ****/
+.isotope,
+.isotope .isotope-item {
+  -webkit-transition-duration: 0.8s;
+     -moz-transition-duration: 0.8s;
+      -ms-transition-duration: 0.8s;
+       -o-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+}
+.isotope {
+  -webkit-transition-property: height, width;
+     -moz-transition-property: height, width;
+      -ms-transition-property: height, width;
+       -o-transition-property: height, width;
+          transition-property: height, width;
+}
+.isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+     -moz-transition-property:    -moz-transform, opacity;
+      -ms-transition-property:     -ms-transform, opacity;
+       -o-transition-property:      -o-transform, opacity;
+          transition-property:         transform, opacity;
+}
+/**** disabling Isotope CSS3 transitions ****/
+
+.isotope.no-transition,
+.isotope.no-transition .isotope-item,
+.isotope .isotope-item.no-transition {
+  -webkit-transition-duration: 0s;
+     -moz-transition-duration: 0s;
+      -ms-transition-duration: 0s;
+       -o-transition-duration: 0s;
+          transition-duration: 0s;
+}
+/*------------------------------------------------------------------
+7. Header
+-------------------------------------------------------------------*/
+.navbar-default {
+    padding: 10px 10px;
+    text-transform: uppercase;
+}
+.navbar-default .navbar-nav li > a {
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 0.10em;
+    color: #262626;
+}
+.navbar-default .navbar-nav > .active > a, 
+.navbar-default .navbar-nav > .active > a:focus, 
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav li > a:hover {
+    background-color: transparent;
+    color: #a0d149;
+}
+/*------------------------------------------------------------------
+7.1. Mobile Navigation
+-------------------------------------------------------------------*/
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+    -webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	-o-border-radius: 0;
+    border-radius: 0;
+}
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+    background-color: transparent; 
+}
+.navbar-default .navbar-toggle .icon-bar { 
+    width: 30px;
+	height: 3px;
+    background: #060606;                                   
+}
+/*------------------------------------------------------------------
+8. Hero Section
+-------------------------------------------------------------------*/
+#hero .block { 
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 80px 50px; 
+    margin-top: 53px;
+    letter-spacing: -0.05em;   
+}
+#hero .block h1 { 
+    font-weight: 300;
+    	-webkit-backface-visibility: hidden;
+	   -moz-backface-visibility: hidden;
+        -ms-backface-visibility: hidden;
+        margin-bottom: 30px;
+}
+#hero .block h3 { 
+    font-family: "Lato", Helvetica, Arial, sans-serif;
+    margin-bottom: 30px;
+}
+/*------------------------------------------------------------------
+9. Basic Section Styles
+-------------------------------------------------------------------*/
+.section .title {
+	text-transform: uppercase;
+	letter-spacing: 0.10em;
+    margin-bottom: 40px;
+	-webkit-backface-visibility: hidden;
+	   -moz-backface-visibility: hidden;
+        -ms-backface-visibility: hidden;
+}
+.section .pretitle {
+   font-size: 18px;
+   line-height: 36px;  
+   margin-bottom: 60px;
+}
+.section .icon { 
+    background-image: url(../images/section-title.png);
+    background-repeat: repeat-x;
+    background-position: center left;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #a0d149;
+} 
+.section .icon i {
+    background-color: #fff;
+    font-size: 40px;
+    padding: 0 50px;
+}
+/*------------------------------------------------------------------
+10. About Section
+-------------------------------------------------------------------*/
+#about {
+    padding: 80px 0;
+    background-color: #ffffff;
+}
+#about .img-responsive {
+    margin-top: 20px;
+} 
+#about .block {
+    margin-bottom: 30px;
+}
+#about .block h2 {
+    font-family: "Lato", Helvetica, Arial, sans-serif;
+}
+/*------------------------------------------------------------------
+11. Call to Action
+-------------------------------------------------------------------*/
+#action { 
+    background-color: #34495e; 
+    padding: 50px 0;
+    text-transform: uppercase;
+}
+#action h2 { 
+    margin-top: 10px;
+    font-size: 30px;
+    color: #f0f0f0;
+}
+#action h2 span {
+     color: #fff;
+     font-weight: 700;                       
+}
+#action .left-margin {
+     margin-left: 10px;                  
+}
+/*------------------------------------------------------------------
+12. Services Section
+-------------------------------------------------------------------*/
+#services {
+    padding: 80px 0;
+    background-color: #ffffff;
+}
+.service-block {
+    margin-bottom: 40px;
+    cursor: pointer;
+}
+.service-block .ibox {
+    text-align: center;
+    font-size: 22px;
+    color: #fff;
+}
+.service-block .ibox i {
+    background-color: #a0d149;
+    color: #ffffff;
+    width: 65px;
+    height: 65px;
+     -webkit-border-radius: 100%;
+	-moz-border-radius: 100%;
+	-o-border-radius: 100%;
+    border-radius: 100%;
+    line-height: 65px;
+    font-size: 30px;
+}
+.service-block:hover .ibox i {
+    background-color: #f0f0f0;
+    color: #a0d149;
+}
+.service-block .tbox {
+    overflow: hidden;
+    padding: 0px 0px 0px 40px;
+}
+.service-block .tbox h3 {
+      margin-bottom: 0;
+}
+/*------------------------------------------------------------------
+13. Counters
+-------------------------------------------------------------------*/
+#counters { 
+    color: #fff;
+    padding: 60px 0px;
+}
+#counters i { 
+    font-size: 40px;
+}
+#counters .numbers-value {
+	font-weight: 900;
+	font-size: 45px;
+	line-height: 60px;
+    color: #fff;
+}
+#counters h6 { 
+    font-size: 14px;
+	text-transform: uppercase;
+	margin-top: 15px;
+	letter-spacing: 0.1em;
+}
+#counters h6 strong { 
+    color: #a0d149;
+}
+/*------------------------------------------------------------------
+14. Portfolio Section
+-------------------------------------------------------------------*/
+#portfolio {
+    padding: 80px 0;
+    background-color: #ffffff;
+}
+/*------------------------------------------------------------------
+14.1. Filter
+-------------------------------------------------------------------*/
+#portfolio .filter {
+	text-align: center;
+    margin-bottom: 10px;
+}
+#portfolio .filter li {
+	display: inline-block;
+}
+#portfolio ul li .button {
+	color: #333;
+    padding: 10px 40px;
+	font-size: 12px;
+	text-transform: uppercase;
+	border: 2px solid #d0d0d0;
+	letter-spacing: 0.20em;
+    cursor: pointer;
+     -webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	-o-border-radius: 0;
+    border-radius: 0;
+}
+#portfolio ul li .button:hover {
+	color: #fff;
+	background: #a0d149;
+	border: 2px solid transparent;
+}
+#portfolio ul li .button.active {
+    background: #a0d149;
+    border: 2px solid transparent;
+     -webkit-box-shadow: none;
+	-moz-box-shadow: none;
+    box-shadow: none;
+	color: #ffffff;
+}
+#portfolio ul li a.button.active:hover {
+	color: #fff;
+}
+/*------------------------------------------------------------------
+14.2. Portfolio Item
+-------------------------------------------------------------------*/
+.portfolio-item {
+    margin-top: 30px;
+    overflow: hidden;
+}
+.portfolio-item .mask {
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    position: absolute;
+    border: 2px solid #ffffff;
+    background-color: rgba(0,0,0,0.5);
+    text-align: center;
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+	-o-transform: translateX(-100%);
+    transform: translateX(-100%);
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+	-ms-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+.portfolio-item:hover .mask {
+    -webkit-transform: translateY(0);
+    -moz-transform: translate(0);
+    -ms-transform: translateY(0);
+	-o-transform: translateY(0);
+    transform: translateY(0);
+}
+.portfolio-item .mask h6 {
+    position: absolute;
+    top:25%;
+    left: 0;
+    right: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #ffffff;
+}
+.portfolio-item .mask p {
+    position: absolute;
+    top:40%;
+    left: 0;
+    right: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 12px;
+    color: #ffffff;
+}
+.portfolio-item .mask ul {
+    position: absolute;
+    top: 55%;
+    left: 0;
+    right: 0;
+}
+.portfolio-item .mask ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+.portfolio-item .mask ul li a {
+    display: inline-block;
+    position: relative;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    background-color: #000000;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 15px;
+    color: #000000; 
+}
+.portfolio-item .mask ul li a i {
+    color: #ffffff; 
+}
+.portfolio-item .mask ul li a:hover {
+    background: #a0d149;
+}
+/*------------------------------------------------------------------
+15. Clients
+-------------------------------------------------------------------*/
+#clients {
+    background-color: #a0d149;
+    padding: 30px 0px;
+    text-align: center;
+     -webkit-box-shadow: 0px 0px 10px 10px #e5e4e3;
+	-moz-box-shadow: 0px 0px 10px 10px #e5e4e3;
+    box-shadow: 0px 0px 10px 10px #e5e4e3;
+}
+#clients img {
+    margin: 0 auto;
+    padding: 5px 5px;
+    border: 1px solid #e5e4e3;
+}
+#clients img:hover {
+    opacity: 0.7;
+}
+/*------------------------------------------------------------------
+16. New Feature Section
+-------------------------------------------------------------------*/
+#new-feature {
+    padding: 80px 0;
+    background-color: #ffffff;
+}
+#new-feature h2 {
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+/*------------------------------------------------------------------
+17. Testimonials
+-------------------------------------------------------------------*/
+#testimonials {
+    padding: 80px 0;
+    text-align: center; 
+}
+.testimonials-title {
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+.testimonials-title span {
+    font-weight: 700;
+    color: #a0d149;
+}
+#testimonials .seperator  {    
+    margin-bottom: 50px;
+}
+.testimonials-slider {
+	text-align: center;
+}
+.testimonials-slider ul.slides i {
+    font-size: 30px;
+    color: #a0d149;
+}
+.testimonials-slider ul.slides h3 {
+    font-size: 28px;
+	font-style: italic;
+	padding: 30px 40px 0 40px;
+    margin-bottom: 30px;
+    color: #ffffff;
+}
+.testimonials-slider ul.slides h4 {
+    font-size: 18px;
+	font-style: italic;
+    font-weight: 300;
+	padding-bottom: 30px;
+    margin-bottom: 80px;
+    color: #ffffff;
+}
+.testimonials-slider ul.slides h4 span {
+	color: #a0d149;
+    -webkit-box-shadow: 1px solid #ebd7d7;
+	-moz-box-shadow: 1px solid #ebd7d7;
+    box-shadow: 1px solid #ebd7d7;
+}
+/*------------------------------------------------------------------
+17.1. Flexslider
+-------------------------------------------------------------------*/
+.flexslider .flex-control-paging li a {
+    height: 15px;
+    width: 15px;
+    overflow: hidden;
+}
+.flexslider .flex-active {
+	background: #a0d149 !important;
+}
+/*------------------------------------------------------------------
+18 Team Section
+-------------------------------------------------------------------*/
+#team {
+    padding: 80px 0;
+    background-color: #ffffff;
+}
+/*------------------------------------------------------------------
+18.1. Team Member
+-------------------------------------------------------------------*/
+.team-member .mask{
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    position: absolute;
+    border: 2px solid #ffffff;
+    background-color: rgba(0,0,0,0.5);
+    text-align: center;
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+	-o-transform: translateX(-100%);
+    transform: translateX(-100%);
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+	-ms-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+.team-member:hover .mask {
+     -webkit-transform: translateY(0);
+    -moz-transform: translate(0);
+    -ms-transform: translateY(0);
+	-o-transform: translateY(0);
+    transform: translateY(0);
+}
+.team-member .mask ul {
+    position: absolute;
+    bottom: 45%;
+    left: 0;
+    right: 0;
+    text-align: center
+}
+.team-member .mask ul li {
+    display: inline-block;
+}
+.team-member .mask ul li a {
+    background-color: #e5e4e3;
+    display: inline-block;
+    height: 35px;
+    width: 35px;
+    line-height: 35px;
+    -webkit-border-radius: 30%;
+	-moz-border-radius: 30%;
+	-o-border-radius: 30%;
+    border-radius: 30%;
+    margin: 0px 10px;
+    font-size: 24px;
+    color: #a0d149;
+}
+.team-member .mask ul li a:hover{
+    background: #232323;
+}
+/*------------------------------------------------------------------
+18.2. Social Icons Hover
+-------------------------------------------------------------------*/
+.team-member .mask ul li a:hover .fa-facebook {
+    color: #475996;
+}
+.team-member .mask ul li a:hover .fa-twitter {
+    color: #69baf3;
+}
+.team-member .mask ul li a:hover .fa-google-plus {
+    color: #f00;
+}
+.team-member .mask ul li a:hover .fa-linkedin {
+    color: #4875b4;
+}
+.team-member .mask ul li a:hover .fa-pinterest {
+	color: #d03737;
+}
+.team-member .mask ul li a:hover .fa-dribbble {
+	color: #d76896;
+}
+.team-member .mask ul li a:hover .fa-behance {
+	color: #00a8e7;
+}
+.team-member .mask ul li a:hover .fa-instagram {
+    color: #beb3a8;
+}
+.team-member .mask ul li a:hover .fa-dropbox {
+	color: #008ad2;
+}
+.team-member .mask ul li a:hover .fa-skype {
+	color: #00a9ed;
+}
+.team-member .mask ul li a:hover .fa-youtube {
+    color: #cd1b20;
+}
+.team-member .mask ul li a:hover .fa-tumblr {
+    color: #3a5976;
+}
+.team-member .mask ul li a:hover .fa-vimeo {
+    color: #00adee;
+}
+.team-member .mask ul li a:hover .fa-flickr {
+    color: #d2d2d2;
+}
+.team-member .mask ul li a:hover .fa-github {
+    color: #222;
+}
+.team-member .mask ul li a:hover .fa-renren {
+    color: #364a83;
+}
+.team-member .mask ul li a:hover .fa-vk {
+    color: #3b5998;
+}
+.team-member .mask ul li a:hover .fa-xing {
+    color: #015f5e;
+}
+.team-member .mask ul li a:hover .fa-weibo {
+    color: #be4443;
+}
+.team-member .mask ul li a:hover .fa-digg {
+    color: #222;
+}
+.team-member .mask ul li a:hover .fa-deviantart {
+    color: #57675d;
+}
+.team-member .mask ul li a:hover .fa-envelope {
+    color: #999;
+}
+.team-member .mask ul li a:hover .fa-delicious {
+    color: #0A0A0A;
+}
+.team-member .mask ul li a:hover .fa-rss {
+    color:  #e67e22;
+}
+.team-info {
+    margin-top: 10px;
+}
+.team-member h3 {
+   margin-bottom: 10px;
+}
+.team-member h5 {
+    color: #a0d149;
+    letter-spacing: 0.2em;
+}
+/*------------------------------------------------------------------
+19. Join Section
+-------------------------------------------------------------------*/
+#join { 
+    padding: 80px 0;
+}
+#join .title {
+    color: #ffffff;
+    font-size: 42px;
+}
+#join .subtitle {
+    color: #c3c2c2;
+    text-transform: uppercase;
+}
+/*------------------------------------------------------------------
+20. Contact Section
+-------------------------------------------------------------------*/
+#contact {
+    padding: 80px 0;
+    background-color: #ffffff;
+}
+/*------------------------------------------------------------------
+20.1. Content Box
+-------------------------------------------------------------------*/
+.content-box {
+    padding: 30px 30px;
+    background-color: #eeeeee;
+}
+.content-box i {
+    display: inline-block;
+    background-color: #a0d149;
+    height: 70px;
+    width: 70px;
+    line-height: 70px;
+    cursor: pointer;
+    -webkit-border-radius: 100%;
+	-moz-border-radius: 100%;
+	-o-border-radius: 100%;
+    border-radius: 100%;
+    position: relative;
+    color: #ffffff;
+    font-size: 35px;
+    -webkit-box-shadow: 0 0 0 2px #fff;
+	-moz-box-shadow: 0 0 0 2px #fff;
+    box-shadow: 0 0 0 2px #fff;
+    -webkit-transition: all .3s ease;
+	-moz-transition: all .3s ease;
+	-ms-transition: all .3s ease;
+	-o-transition: all .3s ease;
+	transition: all .3s ease;
+    margin-bottom: 20px;
+}
+.content-box:hover i {
+    background-color: #ffffff;
+    color: #a0d149;
+    -webkit-box-shadow: 0 0 0 2px #a0d149;
+	-moz-box-shadow: 0 0 0 2px #a0d149;
+    box-shadow: 0 0 0 2px #a0d149;
+}
+.content-box h4 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.content-box p {
+   margin-bottom: 15px;
+}
+/*------------------------------------------------------------------
+20.2. Contact Form
+-------------------------------------------------------------------*/
+.form-control {
+    padding: 10px 15px;
+    background: #eeeeee;
+	border: none;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+   -o-border-radius: 0;
+    border-radius: 0;
+}
+.form-control:hover, .form-control:focus {
+	background: #e7e7e7;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+}
+#btn-submit { 
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    width: 100%;
+}
+.success {
+   background-color: rgba(19, 207, 169, 0.7);
+   padding: 10px;    
+   text-align: center;
+   color: #021410;
+   margin-bottom: 25px;
+}
+.error {
+   background-color: #df5e63;
+   padding: 10px; 
+   text-align: center;
+   color: #5e1316;
+   margin-bottom: 25px;
+}
+/*------------------------------------------------------------------
+21. Blog
+-------------------------------------------------------------------*/
+#blog {
+    padding: 80px 0;
+    background-color: #ffffff;
+}
+#blog .title { 
+    margin-top: 25px; 
+}
+#blog .subtitle { 
+    margin-bottom: 50px; 
+}
+section#blog .section-icon {
+	margin-bottom: 100px;
+}
+.post {
+	position: relative;
+	margin-bottom: 80px;
+	text-align: left;
+}
+.post hr {
+	margin: 10px 0 20px 0;
+}
+.post .post-title {
+	width: 100%;
+	display: inline-block;
+    background: url(../images/background-title.png) left center repeat-x;
+}
+.post .post-title h2 {
+    background: #ffffff;
+	float: left;
+	padding-right: 30px;
+	margin-bottom: 15px;
+}
+.post .post-title h2 a {
+	color: #262626;
+}
+.post .post-title h2 a:hover {
+	color: #a0d149;
+}
+.post .post-meta {
+	margin-bottom: 25px;
+}
+.post .post-meta .post-meta-date,
+.post .post-meta .post-meta-author,
+.post .post-meta .post-meta-category,
+.post .post-meta .post-meta-tags,
+.post .post-meta .post-meta-comments {
+	margin-right: 10px;
+	display: inline-block;
+	font-style: italic;
+}
+.post .post-meta a:hover {
+	color: #212121;
+}
+.post .post-meta .post-meta-author {
+	color: #333;
+}
+.post .post-meta i {
+	margin-right: 5px;
+	color: #666;
+}
+.post .post-media {
+	margin-bottom: 20px;
+}
+.post .post-media .flexslider {
+	width: 720px;
+}
+.post .post-body p {
+	font-size: 14px;
+	line-height: 30px;
+    margin-bottom: 10px;
+}
+.post blockquote p {
+	border-left: 1px solid #a0d149;
+	font-size: 14px;
+	line-height: 30px;
+	font-style: italic;
+	padding: 15px 20px 15px 20px !important;
+	color: #111111;
+	background: #ebebeb;
+	margin: 20px 0;
+}
+.post a.btn-outline {
+	margin-top: 15px;
+}
+.pager li > a, .pager li > span {
+    padding: 8px 25px;
+}
+.pager a {
+    padding: 10px 10px;
+	background: #ebebeb !important;
+}
+.pager a:hover {
+	background: #000000 !important;
+	color: #ffffff;
+}
+.pager .disabled a {
+	background: transparent !important;
+}
+.pager .disabled a:hover {
+	background: transparent !important;
+}
+.pager .previous {
+	float: left;
+}
+.pager .next {
+	float: right;
+}
+/*------------------------------------------------------------------
+21.1. Pagination
+-------------------------------------------------------------------*/
+.pagination span, .pagination a {
+	float: left;
+	margin: 2px 4px 2px 0;
+	padding: 6px 20px;
+	color: #666666;
+	background: #c2c2c2;
+}
+.pagination span:hover, .pagination a:hover {
+	background: #333333;
+}
+.pagination .page-info {	
+	background: none;
+	font-style: italic;
+}
+.pagination .page-info:hover {
+	background: none;
+}
+.pagination .current {
+	background: #a0d149;
+	color: #ffffff;
+}
+.pagination .current:hover {
+	background: #a0d149;
+}
+/*------------------------------------------------------------------
+21.2. Comments
+-------------------------------------------------------------------*/
+#comments {
+    margin-top: 50px;
+}
+#comments p {
+	padding: 0px;
+	text-align: left;
+	font-size: 14px;
+	line-height: 30px;
+    margin-bottom: 0;
+}
+#comments-title {
+	text-transform: uppercase;
+    margin-bottom: 10px;
+}
+#comments-title span {
+	color: #777777;
+	margin-left: 5px;
+}
+#comments .comment-body {
+    margin-bottom: 30px;
+}
+#comments img {
+    margin-bottom: 10px;
+}
+.commentlist .commentmetadata {
+	margin-bottom: 10px;
+}
+.commentlist .commentmetadata a {
+	font-style: italic;
+	color: #999999;
+	font-size: 12px;
+}
+.commentlist .reply a {
+	background: #ffffff;
+	color: #c2c2c2;
+	padding: 4px 8px;
+	font-weight: normal;
+	border: 2px solid #c2c2c2;
+	text-transform: uppercase;
+}
+.commentlist .reply a:hover {
+	background: #a0d149;
+	color: #ffffff;
+	border: 2px solid transparent;
+}
+.form-horizontal .control-group {
+	display: inline-block;
+	width: 100%;
+    margin-bottom: 20px;
+}
+.form-horizontal .controls {
+	float: left;
+}
+.form-horizontal .comment-form-comment .controls {
+	width: 100%;
+}
+.form-horizontal .controls input {
+	height: 35px;
+}
+.form-horizontal .controls input,
+.form-horizontal .controls textarea {
+    padding: 10px 15px;
+	background: #eeeeee;
+	border: none;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+   -o-border-radius: 0;
+    border-radius: 0;
+	width: 100%;
+    color: #333;
+    font-family: "PT Sans", Helvetica, Arial, sans-serif;
+    font-size: 18px;
+	margin-bottom: 0px;
+}
+.form-horizontal .controls input:hover,
+.form-horizontal .controls input:focus,
+.form-horizontal .controls textarea:hover
+.form-horizontal .controls textarea:focus {
+	background: #e7e7e7;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+}
+.form-horizontal .control-label {
+	margin-left: 10px;
+}
+.form-horizontal .required {
+	color: #a0d149;
+}
+.form-horizontal button {
+	padding: 15px 50px;
+    line-height: 16px;
+    white-space: normal;
+    text-align: center;
+    letter-spacing: 0.20em;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    -webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-o-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-transition: All 200ms linear;
+	-moz-transition: All 200ms linear;
+	-ms-transition: All 200ms linear;
+	-o-transition: All 200ms linear; 
+    transition: All 200ms linear;
+    background: transparent;
+    color: rgba(0, 0, 0, 0.8);
+    border: 2px solid rgba(102, 102, 102, 0.5);
+}
+.form-horizontal button:hover {
+	color: #ffffff;
+	background: #a0d149;
+	border: 2px solid transparent;
+}
+/*------------------------------------------------------------------
+22. Sidebar
+-------------------------------------------------------------------*/
+.widget {
+    margin-top: 10px;
+	text-align: left;
+}
+.widget h3 {
+    margin-top: 25px;
+	text-align: left;
+	text-transform: uppercase;
+	font-size: 18px;
+    margin-bottom: 0;
+}
+.widget_search #s { 
+    width: 100%;
+    font-weight: 300;
+    font-size: 14px;
+    background: #fff;
+    border: 1px solid #d9d9d9;
+    line-height: 18px;
+    color: #999;
+    padding: 10px 5px;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -o-border-radius: 3px;
+    -webkit-border-radius: 3x;
+    transition: all 200ms linear;
+}
+.widget_search #s:hover, .widget_search #s:focus {
+	border: 1px solid #000000;
+}
+.widget_search input[type=submit] {
+	display: none;
+}
+.widget ul li  {
+   font-size: 16px;
+   margin: 10px;
+}
+.widget ul li a {
+    color: #a0d149;
+}
+.widget ul li a:hover {
+    opacity: 0.6;
+}
+.tagcloud a {
+	border: 1px solid #d9d9d9;
+    display: inline-block;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 11px;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -o-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    color: #999;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    margin-right: 3px;
+}
+.tagcloud a:hover {
+	color: #ffffff;
+	background: #a0d149;
+}
+/*------------------------------------------------------------------
+23. Footer
+-------------------------------------------------------------------*/
+footer {
+    background-color: #1a1919;
+    padding: 60px 0;
+    text-align: center;
+}
+/*------------------------------------------------------------------
+23.1. Newsletter Form
+-------------------------------------------------------------------*/
+#newsletter h3 {
+    color: #DDD;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+}
+#newsletter form {
+    margin-bottom: 0;
+}
+#newsletter form input[type="email"] {
+    -moz-appearance: none;
+    background-color: #fff;
+	border: 1px solid #ccc;
+	width: 74%;
+    height: 38px;
+	font-size: 16px;
+    font-weight: 400;
+    padding: 6px 6px;
+    color: #666;
+	-webkit-border-radius: 6px 0 0 6px;
+	-moz-border-radius: 6px 0 0 6px;
+	-o-border-radius: 6px 0 0 6px;
+	border-radius: 6px 0 0 6px;
+}
+#newsletter form input[type="submit"] {
+    width: auto;
+    height: 38px;
+	background-color: #a0d149;
+	border: 1px solid transparent;
+	color: #fff;
+	font-size: 16px;
+    font-weight: 900;
+	text-transform: uppercase;
+    padding: 6px 18px;
+	-webkit-border-radius: 0 6px 6px 0;
+	-moz-border-radius: 0 6px 6px 0;
+	-o-border-radius: 0 6px 6px 0;
+	border-radius: 0 6px 6px 0;
+	-webkit-transition: all 350ms ease-in-out;
+	-moz-transition: all 350ms ease-in-out;
+	-o-transition: all 350ms ease-in-out;
+	-ms-transition: all 350ms ease-in-out;
+	transition: all 350ms ease-in-out;
+}
+#newsletter form input[type="submit"]:hover {
+	opacity: 0.8;
+}
+.message {
+    margin-bottom: 10px;
+}
+footer .icons {
+    margin-bottom: 15px;
+}
+/*------------------------------------------------------------------
+23.2. Footer Social Icons
+-------------------------------------------------------------------*/
+footer .icons a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    -webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-o-border-radius: 50%;
+    border-radius: 50%;
+    margin: 0 5px;
+    font-size: 20px;
+    color: #999;
+}
+footer .icons a:hover {
+    color: #ffffff;
+}
+footer .icons a.facebook:hover { 
+    background-color: #475996; 
+}
+footer .icons a.twitter:hover { 
+    background-color: #69baf3;                             
+}
+footer .icons a.google-plus:hover { 
+    background-color: #c63d2d;
+}
+footer .icons a.linkedin:hover { 
+    background-color: #4875b4; 
+}
+footer .icons a.pinterest:hover { 
+    background-color: #d03737; 
+}
+footer .icons a.dribbble:hover { 
+    background-color: #d76896; 
+}
+footer .icons a.behance:hover { 
+    background-color: #00a8e7; 
+}
+footer .icons a.instagram:hover { 
+    background-color: #beb3a8; 
+}
+footer .icons a.dropbox:hover { 
+    background-color: #008ad2; 
+}
+footer .icons a.skype:hover { 
+    background-color: #00a9ed; 
+}
+footer .icons a.youtube:hover { 
+    background-color: #cd1b20; 
+}
+footer .icons a.tumblr:hover { 
+    background-color: #3a5976; 
+}
+footer .icons a.vimeo:hover { 
+    background-color: #00adee; 
+}
+footer .icons a.flickr:hover { 
+    background-color: #d2d2d2; 
+}
+footer .icons a.github:hover { 
+    background-color: #222; 
+}
+footer .icons a.renren:hover { 
+    background-color: #364a83; 
+}
+footer .icons a.vk:hover { 
+    background-color: #3b5998; 
+}
+footer .icons a.xing:hover {
+     background-color: #015f5e; 
+}
+footer .icons a.weibo:hover {
+     background-color: #be4443;
+}
+footer .icons a.digg:hover  { 
+    background-color: #222; 
+}
+footer .icons a.deviantart:hover {
+     background-color: #57675d;
+}
+footer .icons a.envelope:hover { 
+    background-color: #999; 
+}
+footer .icons a.dZelicious:hover {
+     background-color: #0A0A0A; 
+}
+footer .icons a.rss:hover {
+     background-color: #e67e22; 
+}
+/*------------------------------------------------------------------
+23.3. Copyright 
+-------------------------------------------------------------------*/
+footer .copyright {
+    color: #999;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+}
+footer .copyright span {
+    color: #a0d149;
+}
+/*------------------------------------------------------------------
+23.4. Scroll Up
+-------------------------------------------------------------------*/
+#scrollUp {
+    background-image: url(../images/back-to-top.png);
+    background-repeat: no-repeat;
+    background-position: center;
+	background-color: #333;
+    bottom: 0px;
+    right: 30px;
+    height: 35px;
+    width: 50px;
+    -webkit-border-radius: 5px 5px 0 0;
+	-moz-border-radius: 5px 5px 0 0;
+	-o-border-radius: 5px 5px 0 0;
+    border-radius: 5px 5px 0 0;
+}
+#scrollUp:hover {
+	background-color:#a0d149;	
+}
+/*------------------------------------------------------------------
+9. 24. Responsive CSS
+-------------------------------------------------------------------*/
+ @media only screen and (max-width: 992px) {	
+    #about img { 
+    margin-bottom: 25px;
+    }
+    #action {
+    text-align: center;
+    }
+    #clients img { 
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    }
+    .team-member {
+    margin-bottom: 30px;
+    }
+    #new-feature h2, #join .subtitle {
+    line-height: 50px;
+    }
+    .content-box {
+    margin-bottom: 30px;
+    }
+    
+  }
+@media only screen and (max-width: 768px) {
+    .navbar-default .navbar-nav li > a {
+    text-align: center;
+    margin-top: 10px;
+    padding-top: 20px;
+    border-top: 1px solid #f0f0f0;
+    }
+    #hero h1 { 
+    font-size: 40px;
+    }
+    #about img { 
+    margin-bottom: 25px;
+    }
+    #action {
+    text-align: center;
+    }
+    #counters .count { 
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 25px;
+    }
+    #clients img { 
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    }
+    .team-member {
+    margin-bottom: 30px;
+    }
+    .content-box {
+    margin-bottom: 30px;
+    }
+    #newsletter form input[type="email"] {
+    margin-bottom: 5px;
+    }
+    #newsletter form input[type="submit"] {
+    width: 74%;
+    }
+}

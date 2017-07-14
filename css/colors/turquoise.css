@@ -1,0 +1,102 @@
+a {
+	color: #78bca1;
+}
+strong {
+	color: #78bca1;
+}
+.section .icon {
+	color: #78bca1;
+}
+.navbar-default .navbar-nav > .active > a, 
+.navbar-default .navbar-nav > .active > a:focus, 
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav li > a:hover {
+    color: #78bca1;
+}
+.btn-contour {
+    background-color: #78bca1;
+}
+.content-box i {
+    background-color: #78bca1;
+}
+.content-box:hover i {
+    color: #78bca1;
+    -webkit-box-shadow: 0 0 0 2px #78bca1;
+	-moz-box-shadow: 0 0 0 2px #78bca1;
+    box-shadow: 0 0 0 2px #78bca1;
+}
+.service-block .ibox i {
+    background-color: #78bca1;
+}
+.service-block:hover .ibox i {
+    color: #78bca1;
+}
+#counters h6 strong {
+    color: #78bca1;
+}
+#portfolio ul li .button:hover {
+	background: #78bca1;
+}
+#portfolio ul li .button.active {
+    background: #78bca1;
+}
+.portfolio-item .mask ul li a:hover {
+    background: #78bca1;
+}
+#clients {
+	background: #78bca1;
+}
+.testimonials-slider ul.slides i {
+    color: #78bca1;
+}
+.testimonials-title span {
+    color: #78bca1;
+}
+.testimonials-slider ul.slides h4 span {
+	color: #78bca1;
+}
+.flexslider .flex-active {
+	background: #78bca1 !important;
+}
+.team-member .mask ul li a {
+    color: #78bca1;
+}
+.team-member h5 {
+    color: #78bca1;
+}
+.post .post-title h2 a:hover {
+	color: #78bca1;
+}
+.post blockquote p {
+	border-left: 1px solid #78bca1;
+}
+.pagination .current {
+	background: #78bca1;
+}
+.pagination .current:hover {
+	background: #78bca1;
+}
+.commentlist .reply a:hover {
+	background: #78bca1;
+}
+.form-horizontal .required {
+	color: #78bca1;
+}
+.form-horizontal button:hover {
+	background: #78bca1;
+}
+.widget ul li a {
+    color: #78bca1;
+}
+.tagcloud a:hover {
+	background: #78bca1;
+}
+#newsletter form input[type="submit"] {
+	background-color: #78bca1;
+}
+footer .copyright span {
+    color: #78bca1;
+}
+#scrollUp:hover {
+	background-color:#78bca1;	
+}

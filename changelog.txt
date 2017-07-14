@@ -1,0 +1,10 @@
+﻿---------------------------------------------------------------------------------------
+Version 1.0.1
+-----------------------------------------------------------------------------------------
+
+- added blog page
+- added blog post page
+- added portfolio single project page
+- added widgets section
+- added 404 error page
+- updated documentation page
